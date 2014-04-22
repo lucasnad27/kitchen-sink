@@ -1,0 +1,8 @@
+--- 
+  - name: ensure apt is updated 
+    apt: update_cache=true 
+
+  - name: ensure ntpd is at the latest version
+    apt: pkg=ntp state=latest
+    notify:
+      - restart ntpd
