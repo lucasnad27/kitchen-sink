@@ -11,6 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # config.vm.provision "shell", path: "./setup/startup.sh"
     config.vm.provision "ansible" do |ansible|
         ansible.sudo = true
-        ansible.playbook = "playbook.yml"
+        ansible.playbook = "playbooks/playbook.yml"
     end
 end
